@@ -1,7 +1,7 @@
 
 
-const Course = ({course}) => {
-    console.log(course);
+const Course = ({course,handleAddToCart}) => {
+    // console.log(course);
     const {name,description,credit,photo,price}=course
     return (
         <div>
@@ -14,7 +14,7 @@ const Course = ({course}) => {
           <p>Credit:{credit}</p>
           <p>Price : {price}</p>
           <div className="card-actions">
-          <button className="btn btn-info w-full">Add to Cart</button>
+          <button onClick={()=>handleAddToCart(course)} className="btn btn-info w-full">Add to Cart</button>
         </div>
          </div>
     </div>
